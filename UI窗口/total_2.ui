@@ -1,0 +1,3033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TOTAL</class>
+ <widget class="QMainWindow" name="TOTAL">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Agency FB</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>X-Trace行人追踪系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>1</y>
+      <width>1570</width>
+      <height>875</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{
+background:transparent;color:white;
+padding: 7px 80px;
+margin-left: 50px;
+margin-top: 18px;
+}
+QTabBar::tab:hover{
+background:rgb(255,255,255,100);
+}
+QTabBar::tab:selected{
+border-color:white;background:white;color:#3FC2FF;
+}
+QTabBar{
+background-image:url(&quot;C:/Users/33288/Pictures/Saved Pictures/topbar3 (2).png&quot;);
+margin-left: -25px;
+}
+QTabWidget::pane{
+border: 5px solid #9794C5;
+}
+
+
+</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="pic_module">
+     <attribute name="title">
+      <string>图片行人检测</string>
+     </attribute>
+     <widget class="QPushButton" name="pic">
+      <property name="geometry">
+       <rect>
+        <x>461</x>
+        <y>226</y>
+        <width>281</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/picture_tab.png</normaloff>../../images/picture_tab.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>400</width>
+        <height>400</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="save">
+      <property name="geometry">
+       <rect>
+        <x>1425</x>
+        <y>764</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:19px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:18px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>保存</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tl(2).png</normaloff>../../images/rightangle_tl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_bl(2).png</normaloff>../../images/rightangle_bl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tr(2).png</normaloff>../../images/rightangle_tr(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_br(2).png</normaloff>../../images/rightangle_br(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>1333</x>
+        <y>32</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>识别结果</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_12">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>74</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reselect_img">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>重新选择</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_8">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>98</y>
+        <width>69</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/count.png</normaloff>../../images/count.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>55</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count_img">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>115</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>行人数量</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_9">
+      <property name="geometry">
+       <rect>
+        <x>1298</x>
+        <y>197</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/confidence_coefficient.png</normaloff>../../images/confidence_coefficient.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="confidence_coefficient_img">
+      <property name="geometry">
+       <rect>
+        <x>1370</x>
+        <y>205</y>
+        <width>114</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>置信度</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider">
+      <property name="geometry">
+       <rect>
+        <x>1303</x>
+        <y>355</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ClosedHandCursor</cursorShape>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="threshold_img">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>295</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>阈值调控</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_10">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>285</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/threshold.png</normaloff>../../images/threshold.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>53</width>
+        <height>53</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="represent_img">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>106</y>
+        <width>960</width>
+        <height>540</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>1304</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>1510</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submit_img">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>开始识别</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>选择图片</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="img_list">
+      <property name="geometry">
+       <rect>
+        <x>1289</x>
+        <y>491</y>
+        <width>238</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="Line" name="line_14">
+      <property name="geometry">
+       <rect>
+        <x>1282</x>
+        <y>413</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>1333</x>
+        <y>440</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>图片列表</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>44</y>
+        <width>251</width>
+        <height>811</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color: #f0f0f0;
+border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allchecked">
+      <property name="geometry">
+       <rect>
+        <x>1289</x>
+        <y>764</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:19px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:18px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>全选</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allunchecked">
+      <property name="geometry">
+       <rect>
+        <x>1289</x>
+        <y>764</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:19px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:18px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>全不选</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="waiting">
+      <property name="geometry">
+       <rect>
+        <x>401</x>
+        <y>336</y>
+        <width>451</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>正在识别图片, 请稍后...</string>
+      </property>
+     </widget>
+     <zorder>waiting</zorder>
+     <zorder>pic</zorder>
+     <zorder>label_9</zorder>
+     <zorder>save</zorder>
+     <zorder>pushButton</zorder>
+     <zorder>pushButton_2</zorder>
+     <zorder>pushButton_3</zorder>
+     <zorder>pushButton_4</zorder>
+     <zorder>label_2</zorder>
+     <zorder>line_12</zorder>
+     <zorder>reselect_img</zorder>
+     <zorder>picture_8</zorder>
+     <zorder>count_img</zorder>
+     <zorder>picture_9</zorder>
+     <zorder>confidence_coefficient_img</zorder>
+     <zorder>Slider</zorder>
+     <zorder>threshold_img</zorder>
+     <zorder>picture_10</zorder>
+     <zorder>label</zorder>
+     <zorder>label_6</zorder>
+     <zorder>submit_img</zorder>
+     <zorder>picture</zorder>
+     <zorder>img_list</zorder>
+     <zorder>line_14</zorder>
+     <zorder>label_8</zorder>
+     <zorder>allchecked</zorder>
+     <zorder>allunchecked</zorder>
+     <zorder>represent_img</zorder>
+    </widget>
+    <widget class="QWidget" name="vdo_module">
+     <attribute name="title">
+      <string>视频行人追踪</string>
+     </attribute>
+     <widget class="QLabel" name="confidence_coefficient_vdo">
+      <property name="geometry">
+       <rect>
+        <x>1370</x>
+        <y>205</y>
+        <width>114</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>置信度</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tl(2).png</normaloff>../../images/rightangle_tl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_11">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>98</y>
+        <width>69</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/count.png</normaloff>../../images/count.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>55</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_12">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>285</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/threshold.png</normaloff>../../images/threshold.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>53</width>
+        <height>53</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>15</y>
+        <width>253</width>
+        <height>811</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color: #f0f0f0;
+border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submit_vdo">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>开始识别</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="Line" name="line_13">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>74</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_br(2).png</normaloff>../../images/rightangle_br(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_13">
+      <property name="geometry">
+       <rect>
+        <x>1298</x>
+        <y>197</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/confidence_coefficient.png</normaloff>../../images/confidence_coefficient.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="threshold_vdo">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>295</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>阈值调控</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tr(2).png</normaloff>../../images/rightangle_tr(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_bl(2).png</normaloff>../../images/rightangle_bl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="vdo">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>214</y>
+        <width>304</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/video_tab.png</normaloff>../../images/video_tab.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>300</width>
+        <height>300</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="represent_vdo">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>106</y>
+        <width>960</width>
+        <height>540</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color: 
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reselect_vdo">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>重新选择</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="video">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>720</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>选择视频</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_2">
+      <property name="geometry">
+       <rect>
+        <x>1303</x>
+        <y>355</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ClosedHandCursor</cursorShape>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>90</number>
+      </property>
+      <property name="sliderPosition">
+       <number>90</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>1304</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>1510</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>1333</x>
+        <y>32</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>识别结果</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_17">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>504</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/pisition.png</normaloff>../../images/pisition.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="threshold_vdo_2">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>514</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>行人坐标</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_17">
+      <property name="geometry">
+       <rect>
+        <x>1282</x>
+        <y>413</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="idBox">
+      <property name="geometry">
+       <rect>
+        <x>1412</x>
+        <y>455</y>
+        <width>111</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+	background-color: #f0f0f0;
+	border: 1px solid #000;
+}
+QComboBox::down-arrow{
+	border-image: url(E:/python/Competition/PYQT/images/drop.png)
+}
+QComboBox::drop-down{
+	border: none;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>所有目标</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="xmax">
+      <property name="geometry">
+       <rect>
+        <x>1295</x>
+        <y>583</y>
+        <width>59</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>xmax:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ymin">
+      <property name="geometry">
+       <rect>
+        <x>1419</x>
+        <y>644</y>
+        <width>53</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ymin:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ymax">
+      <property name="geometry">
+       <rect>
+        <x>1295</x>
+        <y>644</y>
+        <width>59</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ymax:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="xmin">
+      <property name="geometry">
+       <rect>
+        <x>1419</x>
+        <y>583</y>
+        <width>53</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>xmin:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="id">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>449</y>
+        <width>136</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>行人id：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="xma">
+      <property name="geometry">
+       <rect>
+        <x>1355</x>
+        <y>583</y>
+        <width>51</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="xmi">
+      <property name="geometry">
+       <rect>
+        <x>1472</x>
+        <y>583</y>
+        <width>51</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="yma">
+      <property name="geometry">
+       <rect>
+        <x>1355</x>
+        <y>644</y>
+        <width>51</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ymi">
+      <property name="geometry">
+       <rect>
+        <x>1472</x>
+        <y>644</y>
+        <width>51</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_18">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>684</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="person_counting">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>730</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>行人流量曲线</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ROI">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>730</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ROI区域计数</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewcount_vdo_total">
+      <property name="geometry">
+       <rect>
+        <x>1360</x>
+        <y>106</y>
+        <width>112</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>行人总数</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="viewcount_vdo_ROI">
+      <property name="geometry">
+       <rect>
+        <x>1365</x>
+        <y>144</y>
+        <width>112</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ROI区域:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count_vdo">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>115</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>行人数量</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count_vdo_total">
+      <property name="geometry">
+       <rect>
+        <x>1479</x>
+        <y>109</y>
+        <width>48</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count_vdo_ROI">
+      <property name="geometry">
+       <rect>
+        <x>1478</x>
+        <y>146</y>
+        <width>48</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>1468</x>
+        <y>105</y>
+        <width>14</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>720</y>
+        <width>821</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <zorder>progressBar</zorder>
+     <zorder>vdo</zorder>
+     <zorder>represent_vdo</zorder>
+     <zorder>label_4</zorder>
+     <zorder>confidence_coefficient_vdo</zorder>
+     <zorder>pushButton_9</zorder>
+     <zorder>picture_11</zorder>
+     <zorder>picture_12</zorder>
+     <zorder>submit_vdo</zorder>
+     <zorder>line_13</zorder>
+     <zorder>pushButton_11</zorder>
+     <zorder>picture_13</zorder>
+     <zorder>threshold_vdo</zorder>
+     <zorder>pushButton_15</zorder>
+     <zorder>pushButton_16</zorder>
+     <zorder>reselect_vdo</zorder>
+     <zorder>video</zorder>
+     <zorder>Slider_2</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_5</zorder>
+     <zorder>picture_17</zorder>
+     <zorder>threshold_vdo_2</zorder>
+     <zorder>line_17</zorder>
+     <zorder>idBox</zorder>
+     <zorder>xmax</zorder>
+     <zorder>ymin</zorder>
+     <zorder>ymax</zorder>
+     <zorder>xmin</zorder>
+     <zorder>id</zorder>
+     <zorder>xma</zorder>
+     <zorder>xmi</zorder>
+     <zorder>yma</zorder>
+     <zorder>ymi</zorder>
+     <zorder>line_18</zorder>
+     <zorder>person_counting</zorder>
+     <zorder>ROI</zorder>
+     <zorder>viewcount_vdo_total</zorder>
+     <zorder>viewcount_vdo_ROI</zorder>
+     <zorder>count_vdo_total</zorder>
+     <zorder>count_vdo_ROI</zorder>
+     <zorder>label_12</zorder>
+     <zorder>count_vdo</zorder>
+    </widget>
+    <widget class="QWidget" name="cam_module">
+     <attribute name="title">
+      <string>摄像头实时追踪</string>
+     </attribute>
+     <widget class="Line" name="line_15">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>74</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_14">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>98</y>
+        <width>69</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/count.png</normaloff>../../images/count.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>55</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="allchecked_2">
+      <property name="geometry">
+       <rect>
+        <x>1289</x>
+        <y>764</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:rgb(254,0,0);
+                    border:2px solid #fe0000;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #fff;
+                    border-radius:5px;
+                    color:white;
+					font-size:18px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #fff;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:17px;
+                    color:white;}
+</string>
+      </property>
+      <property name="text">
+       <string>全选</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pic_2">
+      <property name="geometry">
+       <rect>
+        <x>462</x>
+        <y>230</y>
+        <width>279</width>
+        <height>275</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/camera_tab.png</normaloff>../../images/camera_tab.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>275</width>
+        <height>275</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_15">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>285</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/threshold.png</normaloff>../../images/threshold.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>53</width>
+        <height>53</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_16">
+      <property name="geometry">
+       <rect>
+        <x>1298</x>
+        <y>197</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/confidence_coefficient.png</normaloff>../../images/confidence_coefficient.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="save_2">
+      <property name="geometry">
+       <rect>
+        <x>1425</x>
+        <y>764</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:rgb(254,0,0);
+                    border:2px solid #fe0000;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #fff;
+                    border-radius:5px;
+                    color:white;
+					font-size:18px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #fff;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:17px;
+                    color:white;}
+</string>
+      </property>
+      <property name="text">
+       <string>保存</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>1510</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>1281</x>
+        <y>14</y>
+        <width>253</width>
+        <height>811</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color: #f0f0f0;
+border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="count_cam">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>115</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>人数</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="confidence_coefficient_cam">
+      <property name="geometry">
+       <rect>
+        <x>1370</x>
+        <y>205</y>
+        <width>114</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>置信度</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_br(2).png</normaloff>../../images/rightangle_br(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tl(2).png</normaloff>../../images/rightangle_tl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="threshold_cam">
+      <property name="geometry">
+       <rect>
+        <x>1364</x>
+        <y>295</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>阈值调控</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>1304</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>1333</x>
+        <y>32</y>
+        <width>152</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>楷体</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>识别结果</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_3">
+      <property name="geometry">
+       <rect>
+        <x>1303</x>
+        <y>355</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ClosedHandCursor</cursorShape>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>90</number>
+      </property>
+      <property name="sliderPosition">
+       <number>90</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="represent_cam">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>106</y>
+        <width>960</width>
+        <height>540</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color: 
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="camera">
+      <property name="geometry">
+       <rect>
+        <x>498</x>
+        <y>720</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>打开摄像头</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="Line" name="line_16">
+      <property name="geometry">
+       <rect>
+        <x>1282</x>
+        <y>413</y>
+        <width>252</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>642</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_bl(2).png</normaloff>../../images/rightangle_bl(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>1098</x>
+        <y>60</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/rightangle_tr(2).png</normaloff>../../images/rightangle_tr(2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_35">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>285</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/threshold.png</normaloff>../../images/threshold.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>53</width>
+        <height>53</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_36">
+      <property name="geometry">
+       <rect>
+        <x>1298</x>
+        <y>197</y>
+        <width>54</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/confidence_coefficient.png</normaloff>../../images/confidence_coefficient.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="picture_37">
+      <property name="geometry">
+       <rect>
+        <x>1290</x>
+        <y>98</y>
+        <width>69</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+border: none;
+}
+QBUshButton::hover{
+border: 1px solid white;
+border-radius: 15px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../images/count.png</normaloff>../../images/count.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>55</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>1510</x>
+        <y>374</y>
+        <width>8</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="camera_off">
+      <property name="geometry">
+       <rect>
+        <x>498</x>
+        <y>720</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman time</family>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#0167F0;
+                    border:2px solid #0167F0;
+                    border-radius:5px;
+                    color:white
+                  }
+                  QPushButton:hover
+                  {
+                    border:1px solid #0167F0;
+                    border-radius:5px;
+                    color:white;
+					font-size:24px;
+                  }
+                  QPushButton:hover:pressed
+                  {
+                    border:1px solid #60C9F9;
+                    border-radius:17px;
+                    height:17px;
+                    font-size:23px;
+                    color:white;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>关闭摄像头</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>represent_cam</zorder>
+     <zorder>pic_2</zorder>
+     <zorder>camera_off</zorder>
+     <zorder>line_15</zorder>
+     <zorder>picture_14</zorder>
+     <zorder>allchecked_2</zorder>
+     <zorder>picture_15</zorder>
+     <zorder>picture_16</zorder>
+     <zorder>save_2</zorder>
+     <zorder>label_10</zorder>
+     <zorder>label_11</zorder>
+     <zorder>count_cam</zorder>
+     <zorder>confidence_coefficient_cam</zorder>
+     <zorder>pushButton_5</zorder>
+     <zorder>pushButton_6</zorder>
+     <zorder>threshold_cam</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_14</zorder>
+     <zorder>Slider_3</zorder>
+     <zorder>camera</zorder>
+     <zorder>line_16</zorder>
+     <zorder>pushButton_7</zorder>
+     <zorder>pushButton_8</zorder>
+     <zorder>picture_35</zorder>
+     <zorder>picture_36</zorder>
+     <zorder>picture_37</zorder>
+     <zorder>label_40</zorder>
+    </widget>
+    <widget class="QWidget" name="about">
+     <attribute name="title">
+      <string>关于软件</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pic_module</tabstop>
+  <tabstop>reselect_img</tabstop>
+  <tabstop>picture_8</tabstop>
+  <tabstop>picture_9</tabstop>
+  <tabstop>Slider</tabstop>
+  <tabstop>picture_10</tabstop>
+  <tabstop>submit_img</tabstop>
+  <tabstop>picture</tabstop>
+  <tabstop>img_list</tabstop>
+  <tabstop>allchecked</tabstop>
+  <tabstop>allunchecked</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>picture_11</tabstop>
+  <tabstop>picture_12</tabstop>
+  <tabstop>submit_vdo</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>picture_13</tabstop>
+  <tabstop>pushButton_15</tabstop>
+  <tabstop>pushButton_16</tabstop>
+  <tabstop>vdo_module</tabstop>
+  <tabstop>reselect_vdo</tabstop>
+  <tabstop>video</tabstop>
+  <tabstop>Slider_2</tabstop>
+  <tabstop>picture_14</tabstop>
+  <tabstop>allchecked_2</tabstop>
+  <tabstop>pic_2</tabstop>
+  <tabstop>picture_15</tabstop>
+  <tabstop>picture_16</tabstop>
+  <tabstop>save_2</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>save</tabstop>
+  <tabstop>Slider_3</tabstop>
+  <tabstop>camera</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>picture_35</tabstop>
+  <tabstop>picture_36</tabstop>
+  <tabstop>picture_37</tabstop>
+  <tabstop>camera_off</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
