@@ -1,4 +1,3 @@
-简体中文 | [English](README_en.md)
 
 # X-Trace
 > **“"X-Trace" pedestrian tracking system combines pedestrian detection and pedestrian tracking technology, and the overall performance of detection and Re-ID is excellent. The software has a complete architecture, beautiful interface, comprehensive functions, and friendly interaction. It can be widely used in intelligent video surveillance and intelligent security. And other fields**。
