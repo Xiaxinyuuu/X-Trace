@@ -25,13 +25,20 @@ pip install -r requirements.txt
 ### 
 
 ### Start
-1.You can start the software quickly by running main.py
+1.You can get all object detection model
+
+链接: https://pan.baidu.com/s/1Z5hCZhve6M3ON3etC0YadA?pwd=s7hg 提取码: s7hg 
+--来自百度网盘超级会员v3的分享
+
+replace the model folder in your project with this folder
+
+2.You can start the software quickly by running main.py
 
 ```
 python main_pyqt.py
 ```
 
-2.You can start detecting videos or images by running demo.py
+3.You can start detecting videos or images by running demo.py
 ```
 python demo.py --video_path {your video_path} --threshold {threshold}
 ```
